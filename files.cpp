@@ -1,7 +1,5 @@
 #include <iostream>
 #include <cstdio>
-#include <locale>
-
 using namespace std;
 
 void DelLastRow() {
