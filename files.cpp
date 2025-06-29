@@ -74,7 +74,7 @@ int CountWordInFile(const char* filename, const char* word) {
 
 	FILE* file = nullptr;
 	if (fopen_s(&file, filename, "r") != 0 || file == nullptr) {
-		cerr << "Haven`t managed opening file" << filename << endl;
+		cout << "Haven`t managed opening file" << filename << endl;
 		return -1;
 	}
 
@@ -104,13 +104,13 @@ int CountAndReplaceWordInFile(const char* filename, const char* wordToFind, cons
 
 	FILE* file = nullptr;
 	if (fopen_s(&file, filename, "r") != 0 || file == nullptr) {
-		cerr << "Haven`t managed opening file " << filename << endl;
+		cout << "Haven`t managed opening file " << filename << endl;
 		return -1;
 	}
 
 	FILE* output = nullptr;
 	if (fopen_s(&output, "output.txt", "w") != 0 || output == nullptr) {
-		cerr << "Haven`t managed creating output.txt\n";
+		cout << "Haven`t managed creating output.txt\n";
 		fclose(file);
 		return -1;
 	}
@@ -237,12 +237,12 @@ void caesarEncryptFile(const char* inputFileName, const char* outputFileName) {
 	FILE* output = nullptr;
 
 	if (fopen_s(&input, inputFileName, "r") != 0 || input == nullptr) {
-		cerr << "Haven`t managed opening file " << inputFileName << endl;
+		cout << "Haven`t managed opening file " << inputFileName << endl;
 		return;
 	}
 
 	if (fopen_s(&output, outputFileName, "w") != 0 || output == nullptr) {
-		cerr << "Haven`t managed creating file " << outputFileName << endl;
+		cout << "Haven`t managed creating file " << outputFileName << endl;
 		fclose(input);
 		return;
 	}
